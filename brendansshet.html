@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .copyButton {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 18px;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.copyButton:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.copyButton:active {
+  outline: 0;
+}
+
+.copyButton:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+  .copyButton {
+    height: 48px;
+  }
+}
+
+        .intro {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1>
+        Brendan's Shit
+    </h1>
+    <br>
+    <h3>
+        A bookmarklet is a bookmark that contains a javascript function as the URL. The function runs when clicked on.
+    </h3>
+    <br>
+    <a href="https://en.wikipedia.org/wiki/Bookmarklet">See here if you still don't know what a bookmarklet it, or just take my word for it.</a>
+    <h3>
+        If you don't know how to add these refer to this video clip.
+    </h3>
+    <br>
+    <img src="https://media0.giphy.com/media/py2NddpgvhAdV34itn/giphy.gif?cid=790b76115c8af93ed42bf5916791ffa0b8d18aa71ce8a986&amp;rid=giphy.gif&amp;ct=g" alt="Animated GIF"/>
+    <h3>
+        Vid is outdated but the concept is to copy the function (should always start with "javascript:(function()" ). Copy to bookmarks bar, and rename to whatever you want. Then whenever you click the bookmark it'll run the function.
+
+    </h3>
+    <a href="https://forms.gle/EUi4G6n9zb6HpdzD8">YOU CAN GIVE ME SUGGESTIONS HERE <br> PLEASE CONSIDER I NEED IDEAS <br> THIS IS GREATLY APPRECIATED THANK YOU</a>
+    </div>
+    <hr class="solid">
+    <div class="stuff">
+        <h2>
+        Stuff here
+        </h2>
+    <br>
+<h4>
+    RICK: 
+    <br>
+    Wanna crash your - or a friend's - computer?
+    <br>
+    This tab will consecutively open 100,000 tabs of Never Gonna Give You Up.
+</h4>
+<br>
+<a href="javascript:(function()%7Bvar i %3D 5%3Bfor (var i %3D 0%3B i < 100000%3B i%2B%2B) %7Bwindow.open('https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ')%3B%7D%7D)()" id="rick">Click to test. WARNING: ONLY WAY TO END IS TO CLOSE WINDOW. CLICK THIS AT YOUR OWN DISCRETION.</a>
+<br>
+<button class="copyButton" onclick="copyRick()">Copy function</button>
+<br>
+<hr class="dashed">
+<h4>
+    PHIL: 
+    <br>
+    Kinda a virus. When activated, it puts you in fullscreen to an image of Phil Swift every time you press a key on your keyboard.
+</h4>
+<br>
+<a href="javascript:(function()%7Bconst%20img%20%3D%20document.createElement(%22img%22)%3Bimg.src%20%3D%20%22https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSxBNUdoYAwwKLJ1sErkrRnpFs7q0vyixJMizJPgH_--Q%26amp%3Bs%22%3Bdocument.body.appendChild(img)%3Bdocument.onkeydown%20%3D%20function(event)%20%7Bif%20(event.keyCode%20%3D%3D%2065%20%7C%7C%2066%20%7C%7C%2067%20%7C%7C%2017%20%7C%7C%2087)%20%7Bimg.requestFullscreen()%3B%7D%7D%7D)()">Click to test</a>
+<br>
+<button class ="copyButton" onclick="copyPhil()">Copy function</button>
+<hr class="dashed">
+<h4>
+    PHIL SPAM: 
+    <h4>
+Pretty fun command that opens however many tabs of Phil Swift's face that you want. 
+    <br>
+    I may have a thing with Phil Swift. Anyway, clicking this will popup a prompt
+    <br>
+    that will literally just open the number of tabs that you type in.
+    <br>
+    Have fun but don't be stupid because just like RICK, this can crash your computer if 
+    <br>
+    you do too much.
+    </h4>
+    
+
+</h4>
+<br>
+<a href="javascript:(function()%7Blet%20pages%20%3D%20prompt(%22How%20many%20pages%20would%20you%20like%20to%20open%3F%22%2C%20%20%221%2C%202%2C%205000%2C%20etc...%22)%3Bif%20(pages%20!%3D%20%22%22)%20%7Bfor(let%20i%20%3D%200%3B%20i%20%3C%20pages%3B%20i%2B%2B)%20%7Bwindow.open(%22https%3A%2F%2Fi.pinimg.com%2F280x280_RS%2F95%2Fee%2F67%2F95ee679130b0d6c89f2751461bcedc01.jpg%22)%3B%7D%7D%7D)()">Click to test</a>
+<br>
+<button class ="copyButton" onclick="copyPhil2()">Copy function</button>
+    </div>
+    <h1>
+        MORE ON THE WAY
+    </h1>
+    <a href="https://forms.gle/EUi4G6n9zb6HpdzD8">Please consider giving me a suggestion :)</a>
+<script>
+    function copyRick() {
+  navigator.clipboard.writeText("javascript:(function()%7Bvar i %3D 5%3Bfor (var i %3D 0%3B i < 100000%3B i%2B%2B) %7Bwindow.open('https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ')%3B%7D%7D)()");
+  alert("Copied the text: " + "javascript:(function()%7Bvar i %3D 5%3Bfor (var i %3D 0%3B i < 100000%3B i%2B%2B) %7Bwindow.open('https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ')%3B%7D%7D)()");
+}
+function copyPhil() {
+  navigator.clipboard.writeText("javascript:(function()%7Bconst%20img%20%3D%20document.createElement(%22img%22)%3Bimg.src%20%3D%20%22https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSxBNUdoYAwwKLJ1sErkrRnpFs7q0vyixJMizJPgH_--Q%26amp%3Bs%22%3Bdocument.body.appendChild(img)%3Bdocument.onkeydown%20%3D%20function(event)%20%7Bif%20(event.keyCode%20%3D%3D%2065%20%7C%7C%2066%20%7C%7C%2067%20%7C%7C%2017%20%7C%7C%2087)%20%7Bimg.requestFullscreen()%3B%7D%7D%7D)()");
+  alert("Copied the text: " + "javascript:(function()%7Bconst%20img%20%3D%20document.createElement(%22img%22)%3Bimg.src%20%3D%20%22https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSxBNUdoYAwwKLJ1sErkrRnpFs7q0vyixJMizJPgH_--Q%26amp%3Bs%22%3Bdocument.body.appendChild(img)%3Bdocument.onkeydown%20%3D%20function(event)%20%7Bif%20(event.keyCode%20%3D%3D%2065%20%7C%7C%2066%20%7C%7C%2067%20%7C%7C%2017%20%7C%7C%2087)%20%7Bimg.requestFullscreen()%3B%7D%7D%7D)()");
+}
+function copyPhil2() {
+    navigator.clipboard.writeText("javascript:(function()%7Blet%20pages%20%3D%20prompt(%22How%20many%20pages%20would%20you%20like%20to%20open%3F%22%2C%20%20%221%2C%202%2C%205000%2C%20etc...%22)%3Bif%20(pages%20!%3D%20%22%22)%20%7Bfor(let%20i%20%3D%200%3B%20i%20%3C%20pages%3B%20i%2B%2B)%20%7Bwindow.open(%22https%3A%2F%2Fi.pinimg.com%2F280x280_RS%2F95%2Fee%2F67%2F95ee679130b0d6c89f2751461bcedc01.jpg%22)%3B%7D%7D%7D)()");
+  alert("Copied the text: " + "javascript:(function()%7Blet%20pages%20%3D%20prompt(%22How%20many%20pages%20would%20you%20like%20to%20open%3F%22%2C%20%20%221%2C%202%2C%205000%2C%20etc...%22)%3Bif%20(pages%20!%3D%20%22%22)%20%7Bfor(let%20i%20%3D%200%3B%20i%20%3C%20pages%3B%20i%2B%2B)%20%7Bwindow.open(%22https%3A%2F%2Fi.pinimg.com%2F280x280_RS%2F95%2Fee%2F67%2F95ee679130b0d6c89f2751461bcedc01.jpg%22)%3B%7D%7D%7D)()");
+}
+</script>
+
+</body>
+</html>
